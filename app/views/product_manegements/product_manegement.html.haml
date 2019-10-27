@@ -19,8 +19,7 @@
       .stock_2
         .stocking_place
           仕入先
-          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
-          =f.select :age_id,Age.all.collect { |p| [ p.age, p.id ] }
+          =f.select :place_id,Stock.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
         .unit_price
           単品単価
           =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
@@ -30,8 +29,5 @@
         .total_price
           仕入合計
           =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
-          
-    -# .product_manegement_form
-      
-        
-        
+      .button  
+        = f.submit "商品登録!", class: "product_button"

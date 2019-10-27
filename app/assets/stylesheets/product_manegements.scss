@@ -6,7 +6,7 @@
 .stock_2{
   display: flex;
   justify-content: space-evenly;
-  height: 250px;
+  height: 150px;
 }
 
 
@@ -43,4 +43,14 @@
 .total_price{
   height: 20px;
   width: 140px;
+}
+.button{
+  height: 30px;
+  width: 200px;
+  float: right;
+}
+.product_button{
+  background-color: $wood;
+  color: white;
+  border: none;
 }
