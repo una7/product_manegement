@@ -2,6 +2,10 @@ class ProductManegementsController < ApplicationController
   def index 
   end
 
+  # def product_manegement
+  #   # @product = Product.new 
+  # end
+
   def age
     # @ages = Age.where(Age: true)
     # @ages = Age.all
