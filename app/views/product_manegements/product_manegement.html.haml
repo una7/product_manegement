@@ -2,4 +2,14 @@
   .background_image
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
-    商品管理
+    .product_manegement_form
+      = form_for "" do |f|
+        .arrival_day
+        入荷日
+        %input{name: "", type: "date"}
+        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
+        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
+        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
+        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
+        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
+        
