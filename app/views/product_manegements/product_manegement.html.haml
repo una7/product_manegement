@@ -2,14 +2,36 @@
   .background_image
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
-    .product_manegement_form
-      = form_for "" do |f|
+    = form_for "" do |f|
+      .stock_1
         .arrival_day
-        入荷日
-        %input{name: "", type: "date"}
-        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
-        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
-        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
-        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
-        =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: ""
+          入荷日
+          %input{name: "", type: "date", size: "10"}
+        .successful_bid
+          落札した商品名
+          =f.text_field :title, class: "text_field",placeholder: "", size: "10"
+        .exhibition_name
+          出品名
+          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "" , size: "10"
+        .exhibition_price
+          出品価格
+          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "8", size: "10"
+      .stock_2
+        .stocking_place
+          仕入先
+          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
+          =f.select :age_id,Age.all.collect { |p| [ p.age, p.id ] }
+        .unit_price
+          単品単価
+          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
+        .shipping_fee
+          負担した送料
+          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
+        .total_price
+          仕入合計
+          =f.text_field :title, class: "text_field",placeholder: "",maxlength: "", size: "10"
+          
+    -# .product_manegement_form
+      
+        
         
