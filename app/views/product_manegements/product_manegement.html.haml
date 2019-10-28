@@ -7,8 +7,7 @@
       .stock_1
         .arrival_day
           入荷日
-          -# =f.text_date :title, class: "text_field",placeholder: "", size: "35"
-          %input{name: "", type: "date", size: "10"}
+          = f.date_field :arrival, class: "arrival_day_from", size: "35"
         .successful_bid
           落札した商品名
           =f.text_field :successful_bid, class: "successful_bidd_from",placeholder: "", size: "35"
