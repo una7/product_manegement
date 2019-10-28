@@ -15,9 +15,16 @@ CSV.foreach('db/age.csv', headers: true) do |row|
 end
 
 
-['メルカリ','ラクマ','ヤフオク','Paypay','BASE','insta','直接']
+['楽天','ヤフオク','ブランディア','店舗']
 .each do |stock|
   Stock.create!(
     {place: stock }
   )
 end
+
+# ['メルカリ','ラクマ','ヤフオク','Paypay','BASE','insta','直接']
+# .each do |stock|
+#   Stock.create!(
+#     {place: stock }
+#   )
+# end
