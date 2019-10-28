@@ -2,10 +2,13 @@
   .background_image
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
-    .ages
-      -# - @ages.each do |age|
-        -# = age.age
-        -# = age.season
-        %br
+    = form_tag('/product_manegements/search',method: :get) do
+      %input.use_icon{:placeholder => " 検索する", :type => "text"}
+      .ages
+        - @ages.each do |age|
+          = age.age
+          = age.season
+          %br
+        -# = @ages.age
+          -# = age.age
       
-    %input.use_icon{:placeholder => " 検索する", :type => "text"}   
