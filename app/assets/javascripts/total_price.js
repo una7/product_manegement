@@ -1,6 +1,6 @@
 
 $(function(){
-  $('.unit_priced').on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
+  $('.unit_priced',).on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
   $('.shipping_feed').on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
     var unit = $('.unit_priced').val(); // val()でフォームのvalueを取得(数値)
     var shipping = $('.shipping_feed').val(); // val()でフォームのvalueを取得(数値)
