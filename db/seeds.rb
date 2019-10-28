@@ -22,9 +22,9 @@ end
   )
 end
 
-# ['メルカリ','ラクマ','ヤフオク','Paypay','BASE','insta','直接']
-# .each do |sale|
-#   Sale.create!(
-#     {place: sale }
-#   )
-# end
+['メルカリ','ラクマ','ヤフオク','Paypay','BASE','insta','直接']
+.each do |sale|
+  Sale.create!(
+    {place: sale }
+  )
+end
