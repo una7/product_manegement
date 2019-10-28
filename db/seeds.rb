@@ -23,8 +23,8 @@ end
 end
 
 # ['メルカリ','ラクマ','ヤフオク','Paypay','BASE','insta','直接']
-# .each do |stock|
-#   Stock.create!(
-#     {place: stock }
+# .each do |sale|
+#   Sale.create!(
+#     {place: sale }
 #   )
 # end
