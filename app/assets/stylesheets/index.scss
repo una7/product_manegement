@@ -8,8 +8,17 @@
   background-image: url("concrete.jpg");
 }
 
-.user_login{
-  height: 100px;
-  width: 100px;
-  background-color: aqua;
+.login_user{
+
 }
+
+.login.box{
+  height: 20px;
+  width: 80px;
+  // background-color: rgba(0,0,0,0.15);
+}
+.login,
+.logout{ 
+  text-decoration: none;
+}
+
