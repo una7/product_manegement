@@ -11,26 +11,26 @@
           %input{name: "", type: "date", size: "10"}
         .successful_bid
           落札した商品名
-          =f.text_field :successful_bid, class: "text_field",placeholder: "", size: "35"
+          =f.text_field :successful_bid, class: "successful_bidd",placeholder: "", size: "35"
         .exhibition_name
           出品名
-          =f.text_field :product_name, class: "text_field",placeholder: "",maxlength: "" , size: "35"
+          =f.text_field :product_name, class: "exhibition_name",placeholder: "",maxlength: "" , size: "35"
         .exhibition_price
           出品価格
-          =f.text_field :product_price, class: "text_field",placeholder: "",maxlength: "8", size: "10"
+          =f.text_field :product_price, class: "exhibition_price",placeholder: "",maxlength: "8", size: "10"
       .stock_2
         .stocking_place
           仕入先
           =f.select :place_id,Stock.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
         .unit_price
           単品単価
-          =f.text_field :unit_price, class: "text_field",placeholder: "",maxlength: "", size: "10"
+          =f.text_field :unit_price, class: "unit_priced",placeholder: "",maxlength: "", size: "10"
         .shipping_fee
           負担した送料
-          =f.text_field :shipping_fee, class: "text_field",placeholder: "",maxlength: "", size: "10"
+          =f.text_field :shipping_fee, class: "shipping_feed",placeholder: "",maxlength: "", size: "10"
         .total_price
           仕入合計
-          =f.text_field :total_price, class: "text_field",placeholder: "",maxlength: "", size: "10"
+          =f.text_field :total_price, class: "total_price",placeholder: "",maxlength: "", size: "10"
       .button  
         = f.submit "商品登録!", class: "product_button"
 
