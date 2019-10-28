@@ -1,4 +1,4 @@
-
+document.addEventListener("turbolinks:load", function() {
 $(function(){
   $('.unit_priced_from').on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
   $('.shipping_feed_from').on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
@@ -12,6 +12,7 @@ $(function(){
     $('.total_price_from').prepend('¥')    // 手数料の前に¥マークを付ける→出ない
     $('.total_price_from').val(total) // 計算結果を格納用フォームに追加｡もし､入力値を追加したいのなら､今回はdataを引数に持たせる｡
   })
+})
 })
 })
 
