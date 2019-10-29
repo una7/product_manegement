@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_080852) do
+ActiveRecord::Schema.define(version: 2019_10_29_100728) do
 
   create_table "ages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "age"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 2019_10_29_080852) do
     t.integer "unit_price", null: false
     t.integer "shipping_fee", null: false
     t.integer "total_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "sold_day", null: false
+    t.string "market", null: false
+    t.string "proceeds", null: false
+    t.integer "shipping_feed", null: false
+    t.integer "profit", null: false
+    t.date "sold_period", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

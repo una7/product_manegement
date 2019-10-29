@@ -5,6 +5,7 @@ document.addEventListener("turbolinks:load", function() {
     $('.sales_place_from').on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
     console.log('ok');
     $('.stock_price_from').on('input', function(){   //リアルタイムで表示したいのでinputを使う｡入力の度にイベントが発火するようになる｡
+    console.log('ok');  
       var proceed = $('.proceeds_from').val(); // val()でフォームのvalueを取得(数値)
       var ales_place = $('.sales_place_from').val(); // val()でフォームのvalueを取得(数値)
       var stock_price = $('.stock_price_from').val(); // val()でフォームのvalueを取得(数値)

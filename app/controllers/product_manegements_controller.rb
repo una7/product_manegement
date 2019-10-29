@@ -15,6 +15,7 @@ class ProductManegementsController < ApplicationController
     end
   end
   
+  
   def show
     @ages = Age.all
   end
@@ -38,4 +39,7 @@ class ProductManegementsController < ApplicationController
   def product_params
     params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price)
   end
+  # def sale_params
+  #   params.require(:product).permit(:sold_day, :market, :proceeds, :shipping_feed, :profit, :sold_period)
+  # end
 end
