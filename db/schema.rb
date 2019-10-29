@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_052537) do
+ActiveRecord::Schema.define(version: 2019_10_29_080852) do
 
   create_table "ages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "age"
     t.string "season"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "markets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,12 +34,6 @@ ActiveRecord::Schema.define(version: 2019_10_29_052537) do
     t.integer "unit_price", null: false
     t.integer "shipping_fee", null: false
     t.integer "total_price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sales", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

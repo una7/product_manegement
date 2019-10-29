@@ -24,7 +24,7 @@ end
 
 ['メルカリ','ラクマ','ヤフオク','Paypay','BASE','insta','直接']
 .each do |sale|
-  Sale.create!(
+  Market.create!(
     {place: sale }
   )
 end
