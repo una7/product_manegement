@@ -16,7 +16,7 @@
           =f.text_field :product_name, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
         .sales_place
           売上媒体
-          =f.select :place_id,Sale.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
+          =f.select :place_id,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
       .sales_2
         .proceeds
           売り上げ金額
