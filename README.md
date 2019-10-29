@@ -20,6 +20,8 @@
 |total_price|integer|null: true|
 
 ## salesテーブル
+|column|type|options|
+|------|----|-------|
 |sold_day|date|null: false|
 |market|string|null: false|
 |proceeds|string|null: false|
@@ -28,11 +30,17 @@
 |sold_period|date|null: false|
 
 ## stocksテーブル
+|column|type|options|
+|------|----|-------|
 |place|string|unique: true|
 
 ## marketsテーブル
+|column|type|options|
+|------|----|-------|
 |place|string|unique: true|
 
 ## agesテーブル
+|column|type|options|
+|------|----|-------|
 |age|string|unique: true|
 |season|string|unique: true|
