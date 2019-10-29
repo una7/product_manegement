@@ -3,3 +3,34 @@
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
     売上 
+    = form_with model: @product do |f|
+      .sales_1
+        .control_num
+          管理番号
+          -# = f.text_field :arrival
+          = f.date_field :arrival, class: "arrival_day_from", size: "35"
+        .sold_day
+          売れた日
+          =f.text_field :successful_bid, class: "sold_day_from",placeholder: "", size: "35"
+        .product_name
+          出品名
+          =f.text_field :product_name, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
+        .proceeds
+          売り上げ金額
+          =f.text_field :product_price, class: "proceeds_from",placeholder: "",maxlength: "8", size: "10"
+      .sales_2
+        .sales_place
+          売上媒体
+          =f.select :place_id,Sale.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
+        .shipping_fee
+          負担する送料
+          =f.text_field :shipping_fee, class: "sales_place_from",placeholder: "",maxlength: "", size: "10"
+        .stock_price
+          仕入れ価格
+          =f.text_field :unit_price, class: "stock_price_from",placeholder: "",maxlength: "", size: "10"
+        .total_profit
+          利 益
+          =f.text_field :total_price, class: "total_profit_from",placeholder: "",maxlength: "", size: "10"
+      .button  
+        = f.submit "売り上げ登録!", class: "sales_button"
+
