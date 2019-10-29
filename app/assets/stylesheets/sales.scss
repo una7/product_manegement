@@ -2,3 +2,61 @@
   display: flex;
   justify-content: center;
 }
+
+.sales_1{
+  display: flex;
+  justify-content: space-evenly;
+  height: 250px;
+  
+}
+.sales_2{
+  display: flex;
+  justify-content: space-evenly;
+  height: 150px;
+}
+
+
+.control_num{
+  height: 20px;
+  width: 70px;
+}
+
+.sold_day{
+  height: 20px;
+  width: 140px;
+}
+
+.product_name{
+  height: 20px;
+  width: 140px;
+}
+.proceeds{
+  height: 20px;
+  width: 140px;
+}
+.sales_place{
+  height: 20px;
+  width: 140px;
+}
+.shipping_fee{
+  height: 20px;
+  width: 140px;
+}
+.stock_price{
+  height: 20px;
+  width: 140px;
+}
+.total_profit{
+  height: 20px;
+  width: 140px;
+}
+.button{
+  height: 30px;
+  width: 200px;
+  float: right;
+}
+// .product_button{
+//   background-color: $wood;
+//   color: white;
+//   border: none;
+// }

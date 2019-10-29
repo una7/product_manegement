@@ -3,11 +3,11 @@ class ProductManegementsController < ApplicationController
   end
   
   def new
-    @product_m = Product_m.new
+    @product = Product.new
   end
   
   def create
-    @product_m = Product_m.new(product_params)
+    @product = Product.new(product_params)
     if @product.save
       redirect_to root_path
     else
@@ -36,6 +36,6 @@ class ProductManegementsController < ApplicationController
   
   private
   def product_params
-    params.requier(:product_m).permit(:arrival, :product_name, :product_price, :stock, :unit_price, :shipping_fee).merge(user: current_user)
+    params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price)
   end
 end

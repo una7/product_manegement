@@ -2,7 +2,8 @@
   .background_image
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
-    = form_with model: @product_m do |f|
+    -# = form_for @product,:url => {:action => :create} do |f|
+    = form_for @product, url: product_manegements_path do |f|
       .stock_1
         .arrival_day
           入荷日
@@ -19,7 +20,7 @@
       .stock_2
         .stocking_place
           仕入先
-          =f.select :place_id,Stock.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
+          =f.select :stock,Stock.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
         .unit_price
           単品単価
           =f.text_field :unit_price, class: "unit_priced_from",placeholder: "",maxlength: "", size: "10"

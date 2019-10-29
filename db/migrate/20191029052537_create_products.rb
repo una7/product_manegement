@@ -1,6 +1,6 @@
-class CreateProductMs < ActiveRecord::Migration[5.2]
+class CreateProducts < ActiveRecord::Migration[5.2]
   def change
-    create_table :product_ms do |t|
+    create_table :products do |t|
       t.string   :arrival, null: false           #入荷日
       t.string   :successful_bid, null: true     #落札した商品
       t.string   :product_name, null: false      #出品名
