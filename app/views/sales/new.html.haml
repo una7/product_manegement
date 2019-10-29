@@ -3,20 +3,20 @@
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
     売上 
-    = form_for "" do |f|
+    = form_for @sale, url: sales_new_path do |f|
       .sales_1
         .sold_day
           売れた日
           =f.date_field :sold_day, class: "sold_day_from",placeholder: "", size: "35"
         .control_num
           管理番号
-          = f.text_field  class: "arrival_day_from", size: "10"
+          -# = f.text_field  class: "arrival_day_from", size: "10"
         .product_name
           出品名
-          =f.text_field :product_name, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
+          -# =f.text_field :product_name, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
         .markets_place
           売上媒体
-          =f.select :place_id,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
+          =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
       .sales_2
         .proceeds
           売り上げ金額
@@ -29,7 +29,7 @@
           =f.text_field :shipping_feed, class: "stock_price_from",placeholder: "",maxlength: "", size: "10"
         .total_profit
           利 益
-          =f.text_field :profite, class: "total_profit_from",placeholder: "",maxlength: "", size: "10"
+          =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size: "10"
         .total_period
           売れるまでの日数
           =f.text_field :sold_period, class: "total_period_from",placeholder: "",maxlength: "", size: "10"
