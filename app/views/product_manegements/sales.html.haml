@@ -5,23 +5,22 @@
     売上 
     = form_with model: @product do |f|
       .sales_1
-        .control_num
-          管理番号
-          -# = f.text_field :arrival
-          = f.date_field :arrival, class: "arrival_day_from", size: "35"
         .sold_day
           売れた日
-          =f.text_field :successful_bid, class: "sold_day_from",placeholder: "", size: "35"
+          =f.date_field :successful_bid, class: "sold_day_from",placeholder: "", size: "35"
+        .control_num
+          管理番号
+          = f.text_field :arrival, class: "arrival_day_from", size: "10"
         .product_name
           出品名
           =f.text_field :product_name, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
-        .proceeds
-          売り上げ金額
-          =f.text_field :product_price, class: "proceeds_from",placeholder: "",maxlength: "8", size: "10"
-      .sales_2
         .sales_place
           売上媒体
           =f.select :place_id,Sale.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
+      .sales_2
+        .proceeds
+          売り上げ金額
+          =f.text_field :product_price, class: "proceeds_from",placeholder: "",maxlength: "8", size: "10"
         .shipping_fee
           負担する送料
           =f.text_field :shipping_fee, class: "sales_place_from",placeholder: "",maxlength: "", size: "10"
