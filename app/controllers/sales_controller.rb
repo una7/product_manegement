@@ -1,5 +1,7 @@
 class SalesController < ApplicationController
   def index 
+    # @product = Product.all
+    # @product = Product.find(params[:id])
   end
   
   def new
@@ -19,6 +21,4 @@ class SalesController < ApplicationController
   def sale_params
     params.require(:sale).permit(:sold_day, :market, :proceeds, :shipping_feed, :profit, :sold_period)
   end
-
-
 end

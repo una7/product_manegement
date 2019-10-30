@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'product_manegements/age'
   # get 'product_manegements/new'
   get 'sales/new'
+  get 'sales/index'
+  
   resources :product_manegements
 end
