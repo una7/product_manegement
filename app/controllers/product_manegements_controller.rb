@@ -4,10 +4,10 @@ class ProductManegementsController < ApplicationController
   
   def new
     @product = Product.new
-    # @product = Product.find(params[:id])
   end
   
   def create
+    # binding.pry
     @product = Product.new(product_params)
     if @product.save
       redirect_to root_path
