@@ -3,17 +3,17 @@
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
     売上 
-    = form_for @sale, url: sales_new_path do |f|
+    = form_for "" do |f|
       .sales_1
         .sold_day
           売れた日
           =f.date_field :sold_day, class: "sold_day_from",placeholder: "", size: "35"
         .control_num
           管理番号
-          = f.text_field :sold_day, class: "control_num_from", size: "10"
+          = @product.id
+          -# = f.text_field  class: "arrival_day_from", size: "10"
         .product_name
-          出品名
-          =f.text_field :sold_day, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
+          -# =f.text_field :product_name, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
         .markets_place
           売上媒体
           =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
@@ -26,7 +26,7 @@
           =f.text_field :shipping_feed, class: "sales_place_from",placeholder: "",maxlength: "", size: "10"
         .stock_price
           仕入れ価格
-          =f.text_field :sold_day, class: "stock_price_from",placeholder: "",maxlength: "", size: "10"
+          =f.text_field :shipping_feed, class: "stock_price_from",placeholder: "",maxlength: "", size: "10"
         .total_profit
           利 益
           =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size: "10"
