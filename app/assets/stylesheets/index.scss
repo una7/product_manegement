@@ -22,3 +22,19 @@
   text-decoration: none;
 }
 
+.product_manegement{
+  &:hover{
+    .product_manegement__registration{
+      visibility: visible;
+    }
+    .product_manegement__list{
+      visibility: visible;
+    }
+  }
+  .product_manegement__registration{
+    visibility: hidden;
+  }
+  .product_manegement__list{
+    visibility: hidden;
+  }
+}

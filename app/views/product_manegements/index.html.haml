@@ -17,7 +17,12 @@
     .main_contents
       .product_manegement
         %i.fas.fa-tshirt
-        =link_to "product_manegement", new_product_manegement_path, class:"product_manegement"
+        product_manegement
+        .product_manegement__registration
+          =link_to "商品登録", new_product_manegement_path, class:"product_manegement"
+        .product_manegement__list
+          商品一覧
+      
       .sales
         %i.fas.fa-money-check-alt
         =link_to "sales", sales_new_path, class:"sales"
