@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root 'product_manegements#index'
   
   get 'product_manegements/age'
-  # get 'product_manegements/new'
   get 'sales/new'
   get 'sales/index'
   
