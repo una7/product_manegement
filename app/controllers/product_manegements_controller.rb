@@ -27,7 +27,7 @@ class ProductManegementsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     if @product.destroy
-      redirect_to root_path
+      redirect_to registration_product_manegements_path
     else
       redirect_to action: :show
     end

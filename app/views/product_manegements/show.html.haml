@@ -37,7 +37,9 @@
         .sold
           %button.sold_btn 売った
         .edit
-          %button.edit_btn 編集
+          %button.edit_btn 
+            =link_to "編集", edit_product_manegement_path
+          
         .delete
           %button.delete_btn 
             = link_to "削除",product_manegement_path(@product.id), method: :delete
