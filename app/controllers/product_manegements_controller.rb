@@ -10,30 +10,27 @@ class ProductManegementsController < ApplicationController
     # binding.pry
     @product = Product.new(product_params)
     if @product.save
-      redirect_to root_path
+      redirect_to registration_product_manegements_path
     else
       render :new
     end
   end
   
+  def registration
+    @product = Product.all
+  end
   
   def show
-    @ages = Age.all
+    @product = Product.find(params[:id])
   end
   
-  def age
-    @ages = Age.all
-    # @ages = Age.where(Age: true)
-    # @ages = Age.all
-    # @ages = Age.find(params[:id])
-    # @ages = Age.find(1)
-    # @ages = Age.where('age LIKE(?)',"% #{params[:keyword]}%").limit(5)
-    # @ages = Age.find_by_age (age)
-    # モデル.find_by_カラム名 (検索する値)
-  end
-
-  def search
-    @ages = Age.where('age LIKE(?)',"% #{params[:keyword]}%").limit(5)
+  def destroy
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to root_path
+    else
+      redirect_to action: :show
+    end
   end
   
   private
