@@ -19,14 +19,13 @@
         %i.fas.fa-tshirt
         product_manegement
         .product_manegement__registration
-          =link_to "商品登録", new_product_manegement_path, class:"product_manegement"
+          =link_to "商品登録",  new_product_manegement_path, class:"product_manegement"
         .product_manegement__list
-          商品一覧
-      
+          =link_to "商品一覧", registration_product_manegements_path, class:"product_manegement"
       .sales
         %i.fas.fa-money-check-alt
         =link_to "sales", sales_new_path, class:"sales"
       .age
         %i.fas.fa-search-plus
-        =link_to "age", product_manegements_age_path, class:"age"
+        =link_to "age", ages_index_path, class:"age"
   
