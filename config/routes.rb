@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'registration'
     end
   end
+
   get 'sales/new'
   get 'sales/index'
   get 'ages/index'
