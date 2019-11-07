@@ -33,14 +33,15 @@
       .all_btn
         .sold
           %button.return_btn 
-            =link_to "戻る", registration_product_manegements_path
+            =link_to "戻る", registration_product_manegements_path, class:"btn"
         .sold
-          %button.sold_btn 売った
+          %button.sold_btn
+            =link_to "売れた", root_path, class:"btn"
         .edit
           %button.edit_btn 
-            =link_to "編集", edit_product_manegement_path
+            =link_to "編集", edit_product_manegement_path, class:"btn"
           
         .delete
           %button.delete_btn 
-            = link_to "削除",product_manegement_path(@product.id), method: :delete
+            = link_to "削除",product_manegement_path(@product.id), method: :delete, class:"btn"
         .coment
