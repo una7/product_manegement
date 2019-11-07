@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'product_manegements#index'
   
-  resources :product_manegements, only:[:show, :new, :create, :destroy, :edit] do
+  resources :product_manegements, only:[:show, :new, :create, :destroy, :edit, :update] do
     collection do
       get 'registration'
     end
