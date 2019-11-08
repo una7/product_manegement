@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'sales/new'
   get 'sales/index'
   get 'ages/index'
+  get 'ages/search'
   resources :ages
   
 end
