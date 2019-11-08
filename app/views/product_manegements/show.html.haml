@@ -36,7 +36,7 @@
             =link_to "戻る", registration_product_manegements_path, class:"btn"
         .sold
           %button.sold_btn
-            =link_to "売れた", root_path, class:"btn"
+            =link_to "売れた", sold_product_manegements_path(@product.id), class:"btn"
         .edit
           %button.edit_btn 
             =link_to "編集", edit_product_manegement_path, class:"btn"

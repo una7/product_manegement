@@ -1,5 +1,5 @@
 class ProductManegementsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update]
+  before_action :set_product, only: [:show, :edit, :update, :sold]
   def index 
   end
   
@@ -15,10 +15,12 @@ class ProductManegementsController < ApplicationController
     else
       render :new
     end
+
   end
   
   def registration
-    @product = Product.all
+    @product = Product.all.where(status: :exhibit)
+    # @product = Product.all.where(status: :sold) 売れたもののみ表示するとき
   end
   
   def show
@@ -29,10 +31,11 @@ class ProductManegementsController < ApplicationController
   end
 
   def update
+  
     if @product.update(product_params)
-      redirect_to edit_product_manegement_path(@product), notice: '情報を編集しました'
+      redirect_to root_path notice: '情報を編集しました'
     else
-      redirect_to root_path
+      redirect_to dit_product_manegement_path(@product.id)
     end
 
     # if @product.user_id == current_user.id
@@ -52,9 +55,18 @@ class ProductManegementsController < ApplicationController
     end
   end
   
+  def sold
+    if @product.update(status: :sold)
+      redirect_to root_path
+    # else
+    #   redirect_to product_manegement_path(@product.id)
+    end
+  end
+
+  
   private
   def product_params
-    params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price)
+    params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price).merge(status: :exhibit)
   end
 
   def set_product
