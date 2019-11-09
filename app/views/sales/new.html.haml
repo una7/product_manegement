@@ -2,37 +2,37 @@
   .background_image
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
-    売上 
     = form_for @sale, url: sales_new_path do |f|
-      .sales_1
-        .sold_day
-          売れた日
-          =f.date_field :sold_day, class: "sold_day_from",placeholder: "", size: "35"
-        .control_num
-          管理番号
-          = f.text_field :sold_day, class: "control_num_from", size: "10"
-        .product_name
-          出品名
-          =f.text_field :sold_day, class: "product_name_from",placeholder: "",maxlength: "" , size: "35"
-        .markets_place
-          売上媒体
-          =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---"
-      .sales_2
-        .proceeds
-          売り上げ金額
-          =f.text_field :proceeds, class: "proceeds_from",placeholder: "",maxlength: "8", size: "10"
-        .shipping_feed
-          負担する送料
-          =f.text_field :shipping_feed, class: "sales_place_from",placeholder: "",maxlength: "", size: "10"
-        .stock_price
-          仕入れ価格
-          =f.text_field :sold_day, class: "stock_price_from",placeholder: "",maxlength: "", size: "10"
-        .total_profit
-          利 益
-          =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size: "10"
-        .total_period
-          売れるまでの日数
-          =f.text_field :sold_period, class: "total_period_from",placeholder: "",maxlength: "", size: "10"
-      .button  
-        = f.submit "売り上げ登録!", class: "sales_button"
-
+      .main_content 
+        %table
+          %tr
+            %th 売れた日
+            %th 管理番号
+            %th 出品名
+            %th 売上媒体
+            %th 売り上げ金額
+            %th 負担する送料
+            %th 仕入れ価格
+            %th 利益
+            %th 売れるまでの日数
+            %tr
+              %td
+                =f.date_field :sold_day, class: "sold_day_from",placeholder: "", style: "border: none"
+              %td 
+                = f.text_field :sold_day, class: "control_num_from", style: "border: none"
+              %td
+                =f.text_field :sold_day, class: "product_name_from",placeholder: "",maxlength: "", style: "border: none"
+              %td
+                =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
+              %td
+                =f.text_field :proceeds, class: "proceeds_from",placeholder: "",maxlength: "8", size:"18", style: "border: none"
+              %td 
+                =f.text_field :shipping_feed, class: "sales_place_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
+              %td 
+                =f.text_field :sold_day, class: "stock_price_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
+              %td 
+                =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
+              %td 
+                =f.text_field :sold_period, class: "total_period_from",placeholder: "",maxlength: "", size:"15", style: "border: none"
+        .button  
+          = f.submit "売り上げ登録!", class: "sales_button"
