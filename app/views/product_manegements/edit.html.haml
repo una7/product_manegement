@@ -32,15 +32,15 @@
                 =f.text_field :shipping_fee, class: "shipping_feed_from",placeholder: "",maxlength: "", style: "border: none"
               %td 
                 =f.text_field :total_price, class: "total_price_from",placeholder: "",maxlength: "", style: "border: none"
-      .button  
-        = f.submit "編集完了!", class: "product_button"
+      -# .button  
+      -#   = f.submit "編集完了!", class: "product_button"
 
-      -# .all_btn
-      -#   .sold
-      -#     %button.return_btn 
-      -#       =link_to "戻る", registration_product_manegements_path, class:"btn"
-      -#   .edit
-      -#     %button.edit_btn 
-      -#       =link_to "編集完了",  product_manegement_path, method: :put, class:"btn"
-
-      -#   .coment
+      .all_btn
+        .sold
+          %button.return_btn 
+            =link_to "戻る", registration_product_manegements_path, class:"btn"
+        .edit
+          %button.edit_btn 
+            -# =link_to "編集完了",  product_manegement_path, method: :put, class:"btn"
+            = f.submit "編集完了!", class: "product_button"
+        .coment
