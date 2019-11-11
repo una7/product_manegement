@@ -10,9 +10,17 @@ Rails.application.routes.draw do
       end
     end
   end
-
-  get 'sales/new'
-  get 'sales/index'
+  
+  resources :sales, only:[:index, :show, :destroy, :edit, :update] do
+    collection do
+      scope '/sales' do
+        get '/:id/new', to: 'sales#new', as: 'new'
+      end
+      scope '/sales' do
+        post '/:id/create', to: 'sales#create', as: 'create'
+      end
+    end
+  end
   get 'ages/index'
   get 'ages/search'
   resources :ages

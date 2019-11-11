@@ -1,5 +1,5 @@
 class ProductManegementsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :sold]
+  before_action :set_product, only: [:show, :edit, :update, :sold, ]
   def index 
   end
   
@@ -27,11 +27,9 @@ class ProductManegementsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-  
     if @product.update(product_params)
       redirect_to root_path notice: '情報を編集しました'
     else
@@ -51,13 +49,13 @@ class ProductManegementsController < ApplicationController
     if @product.destroy
       redirect_to registration_product_manegements_path
     else
-      redirect_to action: :show
+      redirect_to :show
     end
   end
   
   def sold
     if @product.update(status: :sold)
-      redirect_to root_path
+      redirect_to sales_path
     # else
     #   redirect_to product_manegement_path(@product.id)
     end
