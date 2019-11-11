@@ -8,7 +8,6 @@ class ProductManegementsController < ApplicationController
   end
   
   def create
-    # binding.pry
     @product = Product.new(product_params)
     if @product.save
       redirect_to registration_product_manegements_path
@@ -31,7 +30,7 @@ class ProductManegementsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to root_path notice: '情報を編集しました'
+      redirect_to registration_product_manegements_path notice: '情報を編集しました'
     else
       redirect_to dit_product_manegement_path(@product.id)
     end

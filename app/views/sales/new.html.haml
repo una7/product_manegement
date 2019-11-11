@@ -28,11 +28,11 @@
                 =f.text_field :proceeds, class: "proceeds_from",placeholder: "",maxlength: "8", size:"18", style: "border: none"
               %td 
                 =f.text_field :shipping_feed, class: "sales_place_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
-              %td 
+              %td.stock
                 = @product.total_price
               %td 
                 =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
-              %td 
+              %td
                 =f.text_field :sold_period, class: "total_period_from",placeholder: "",maxlength: "", size:"15", style: "border: none"
         .button  
           = f.submit "売り上げ登録!", class: "sales_button"
