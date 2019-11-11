@@ -2,7 +2,7 @@
   .background_image
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
-    = form_for @sale, url: sales_new_path do |f|
+    = form_for @sale, url: create_sales_path, method: :post do |f|
       .main_content 
         %table
           %tr
@@ -19,9 +19,9 @@
               %td
                 =f.date_field :sold_day, class: "sold_day_from",placeholder: "", style: "border: none"
               %td 
-                = f.text_field :sold_day, class: "control_num_from", style: "border: none"
+                = @product.id
               %td
-                =f.text_field :sold_day, class: "product_name_from",placeholder: "",maxlength: "", style: "border: none"
+                = @product.product_name
               %td
                 =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
               %td
@@ -29,7 +29,7 @@
               %td 
                 =f.text_field :shipping_feed, class: "sales_place_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
               %td 
-                =f.text_field :sold_day, class: "stock_price_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
+                = @product.total_price
               %td 
                 =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
               %td 
