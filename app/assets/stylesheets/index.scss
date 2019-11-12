@@ -10,6 +10,7 @@
 }
 
 .login_user{
+
 }
 
 .login.box{
@@ -38,18 +39,42 @@
     visibility: hidden;
   }
 }
-
-.product_manegement_registration{
-  height: 50px;
-  width: 200px;
-  color: white;
-  background-color: black;
-  text-decoration: none;
+.sales{
+  &:hover{
+    .sales__registration{
+      visibility: visible;
+    }
+    .sales__list{
+      visibility: visible;
+    }
+  }
+  .sales__registration{
+    visibility: hidden;
+  }
+  .sales__list{
+    visibility: hidden;
+  }
 }
-.product_manegement_list{
-  height: 50px;
-  width: 200px;
-  color: white;
-  background-color: black;
+.age{
+  &:hover{
+    .age__list{
+      visibility: visible;
+    }
+  }
+  .age__list{
+    visibility: hidden;
+  }
+}
+
+.product_manegement_regi,
+.product_manegement_list,
+.sales_regi,
+.sales_list,
+.age_list{
+  height: 70px;
+  width: 100px;
   text-decoration: none;
+  color: black;
+  font-size: 20px;
+  background-color: white;
 }

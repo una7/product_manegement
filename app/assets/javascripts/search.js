@@ -1,17 +1,15 @@
-$(function(){
-  $(".use_icon").on("keyup",function(e){
-    e.preventDefault();
+$(function() {
+  $(".use_icon").on("keyup", function() {
     var input = $(".use_icon").val();
-    if (input == "") {
-      $("#user-search-result").empty();
-      return false
-    }
-
+    console.log(input)
     $.ajax({
       type: 'GET',
-      url: '/ages/search',
+      url: '/ages/index',
       data: { keyword: input },
-      dataType: "json"
-    });
+      dataType: 'json'
+    })
+    .done(function(ages) {
+      console.log(ages);
+    })
   });
 });
