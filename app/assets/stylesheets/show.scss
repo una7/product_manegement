@@ -8,6 +8,7 @@
   color: black;
   display: block;
   cursor: pointer;
+  border-radius: 10px;
 }
 .return_btn{
   margin: 10px;
@@ -16,6 +17,7 @@
   margin-right: 100px;
   font-size: 20px;
   font-weight: bold;
+  border-radius: 10px;
   &:hover{
     background-color: orange;
   }
@@ -27,6 +29,7 @@
   width: 200px;
   font-size: 20px;
   font-weight: bold;
+  border-radius: 10px;
   &:hover{
     background-color: orange;
   }
@@ -39,6 +42,7 @@
   font-weight: bold;
   margin-right: 100px;
   margin-left: 100px;
+  border-radius: 10px;
   &:hover{
     background-color: orange;
   }
@@ -49,6 +53,7 @@
   width: 200px;
   font-size: 20px;
   font-weight: bold;
+  border-radius: 10px;
   &:hover{
     background-color: orange;
   }

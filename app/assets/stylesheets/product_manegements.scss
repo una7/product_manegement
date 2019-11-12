@@ -49,6 +49,8 @@ select{
   width: 180px;
   font-size: 20px;
   font-weight: bold;
+  border-radius: 10px;
+  
   &:hover{
     background-color: orange;
   }
