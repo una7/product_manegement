@@ -15,6 +15,10 @@ class AgesController < ApplicationController
 
   def search
     @ages = Age.where('age LIKE(?)',"% #{params[:keyword]}%").limit(5)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
 end
