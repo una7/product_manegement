@@ -5,13 +5,15 @@
     = form_tag  ages_search_ages_path, method: :get, class:'use_icon'  do
       %input{:placeholder => " 検索する", :type => "search",name: "keyword"}
       -# %button.use_icon{:type => "submit"}
-    .search
-      検索結果
-      .result
-        - @ages.each do |age|
-          .result__search
-            = age.season
-          -# = age.age
+    -# .search
+    -#   検索結果
+    .result
+      - @ages.each do |age|
+        .result__search
+          = age.age+ ":"     #検索したアルファベットの表示
+          = age.season
+    .yohji_link
+    = link_to "ヨウジヤマモト","https://www.fashion-press.net/collections/brand/42", class:"yohji"
 
   -#     .ages
   -# - @ages.each do |age|

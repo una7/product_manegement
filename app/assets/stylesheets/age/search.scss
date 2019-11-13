@@ -1,8 +1,37 @@
-.result{
-  height: 300px;
-  width: 500px;
-  background-color: skyblue;
-  opacity:0.5;
+.use_icon{
+  margin: 30px 50px 0 50px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.search{
+  font-size: 25px;
   margin-left: 50px;
-  // margin:  0 auto;
+  // font-weight: bold;
+}
+.result{
+  // height: 100%;
+  width: 200px;
+  margin: 20px 0 0 100px;
+  background-color:rgba(255,255,255,0.5); //rgba(赤,緑,青,透明度)
+  &__search{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom:solid 1.5px #F5F5F5;
+    
+  }
+}
+
+.yohji_link{
+  
+}
+.yohji{
+  margin-left: 100px;
+  text-decoration: none;
 }
