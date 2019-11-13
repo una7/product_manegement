@@ -21,7 +21,7 @@
             %td 
               = product.id
             %td
-              =link_to product.product_name, new_sales_path(product.id)
+              =link_to product.product_name + "[#{product.id.to_s}]", new_sales_path(product.id)
             %td
               = sale.market
               -# =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
