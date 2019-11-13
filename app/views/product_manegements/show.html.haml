@@ -45,4 +45,5 @@
         .delete
           %button.delete_btn 
             = link_to "削除",product_manegement_path(@product.id), method: :delete, class:"btn"
-        .coment
+      .comment
+        =text_area "#", class: "comment",placeholder: "メモ", style: "border: none"

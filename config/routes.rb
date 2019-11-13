@@ -21,8 +21,9 @@ Rails.application.routes.draw do
       end
     end
   end
-  get 'ages/index'
-  get 'ages/search'
-  resources :ages
-  
+  resources :ages,only:[:index] do
+    collection do
+      get 'ages/search'
+    end
+  end
 end
