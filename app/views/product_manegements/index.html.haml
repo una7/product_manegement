@@ -7,7 +7,7 @@
     .login_user
     - if user_signed_in?
       ="#{current_user.name}さん"
-    .login.box
+    .login
       - unless user_signed_in?
         .not_login 
           = link_to "ログインしてください", new_user_session_path, class:"login"
@@ -34,5 +34,5 @@
         %i.fas.fa-search-plus
         age
         .age__list
-          =link_to "年代検索", ages_index_path, class:"age_list"
+          =link_to "年代検索", ages_path, class:"age_list"
   
