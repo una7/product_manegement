@@ -54,7 +54,7 @@ class ProductManegementsController < ApplicationController
   
   def sold
     if @product.update(status: :sold)
-      redirect_to sales_path
+      redirect_to new_sales_path
     # else
     #   redirect_to product_manegement_path(@product.id)
     end
