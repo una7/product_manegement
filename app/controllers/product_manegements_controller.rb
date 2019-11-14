@@ -38,13 +38,6 @@ class ProductManegementsController < ApplicationController
     else
       redirect_to edit_product_manegement_path(@product.id)
     end
-
-    # if @product.user_id == current_user.id
-    #   @product.update(product_params)
-    #   redirect_to product_path(@product)
-    # else
-    #   redirect_to root_path
-    # end
   end
   
   def destroy

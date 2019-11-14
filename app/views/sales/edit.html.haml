@@ -55,8 +55,8 @@
             -# = link_to "編集完了！", sale_path,method: :patch, class:"btn"
             = f.submit "編集完了！", class:"product_button"
           
-        .delete
-          %button.delete_btn 
+        .cancel
+          %button.cancel_btn 
             = link_to "キャンセル",root_path(@product.id), class:"btn"
       .comment
         =text_area "#", class: "comment",placeholder: "メモ", style: "border: none"

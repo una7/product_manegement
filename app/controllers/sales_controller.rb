@@ -25,7 +25,7 @@ class SalesController < ApplicationController
   def update
     @sale = Sale.find(params[:id])
     if @sale.update(update_params)
-      redirect_to root_path notice: '情報を編集しました'
+      redirect_to sales_path notice: '情報を編集しました'
     else
       redirect_to root_path(@product.id)
     end
