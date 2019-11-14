@@ -36,7 +36,7 @@ class ProductManegementsController < ApplicationController
     if @product.update(update_params)
       redirect_to registration_product_manegements_path notice: '情報を編集しました'
     else
-      redirect_to dit_product_manegement_path(@product.id)
+      redirect_to edit_product_manegement_path(@product.id)
     end
 
     # if @product.user_id == current_user.id
