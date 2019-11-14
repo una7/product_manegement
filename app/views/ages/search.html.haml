@@ -11,12 +11,9 @@
       - @ages.each do |age|
         .result__search
           = age.age+ ":"     #検索したアルファベットの表示
-          = age.season
+          = age.season+ " :"
+          = age.url
+          %a{href: "#{age.url}"} ヨウジオム
+
     .yohji_link
     = link_to "ヨウジヤマモト","https://www.fashion-press.net/collections/brand/42", class:"yohji"
-
-  -#     .ages
-  -# - @ages.each do |age|
-  -#   = age.age
-  -#   = age.season
-  -#   %br

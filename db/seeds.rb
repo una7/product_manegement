@@ -10,7 +10,8 @@ require "csv"
 CSV.foreach('db/age.csv', headers: true) do |row|
   Age.create(
     age: row['age'],
-    season: row['season']
+    season: row['season'],
+    url: row['url']
   )
 end
 
