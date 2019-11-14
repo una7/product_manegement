@@ -1,0 +1,33 @@
+.wrapper
+  .background_image
+    .main_header
+      = link_to "Product manegementS",root_path, class: 'top_page_link'
+    .main_content 
+      %table
+        %tr
+          %th 入荷日
+          %th 落札した商品名
+          %th 出品名
+          %th 出品価格
+          %th 仕入先
+          %th 落札価格
+          %th 負担した送料
+          %th 合計仕入れ金額
+        - @product.each do |product|
+          %tr
+            %td
+              = product.arrival
+            %td 
+              = product.successful_bid 
+            %td 
+              =link_to product.product_name + "[#{product.id.to_s}]", product_manegement_path(product.id),class:"link_name"
+            %td 
+              = product.product_price 
+            %td 
+              = product.stock
+            %td 
+              = product.unit_price
+            %td 
+              = product.shipping_fee
+            %td 
+              = product.total_price
