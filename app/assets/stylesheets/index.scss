@@ -31,11 +31,17 @@
     .product_manegement__list{
       visibility: visible;
     }
+    .product_manegement_list__all{
+      visibility: visible;
+    }
   }
   .product_manegement__registration{
     visibility: hidden;
   }
   .product_manegement__list{
+    visibility: hidden;
+  }
+  .product_manegement_list__all{
     visibility: hidden;
   }
 }
@@ -68,6 +74,7 @@
 
 .product_manegement_regi,
 .product_manegement_list,
+.product_manegement_list__all,
 .sales_regi,
 .sales_list,
 .age_list{

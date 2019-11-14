@@ -1,6 +1,10 @@
 class ProductManegementsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :sold, ]
+  before_action :set_product, only: [:show, :edit, :update, :sold]
   def index 
+  end
+
+  def all 
+    @product = Product.all
   end
   
   def new
@@ -29,7 +33,7 @@ class ProductManegementsController < ApplicationController
   end
 
   def update
-    if @product.update(product_params)
+    if @product.update(update_params)
       redirect_to registration_product_manegements_path notice: '情報を編集しました'
     else
       redirect_to dit_product_manegement_path(@product.id)
@@ -65,7 +69,9 @@ class ProductManegementsController < ApplicationController
   def product_params
     params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price).merge(status: :exhibit)
   end
-
+  def update_params
+    params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price)
+  end
   def set_product
     @product = Product.find(params[:id])
   end
