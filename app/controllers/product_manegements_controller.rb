@@ -4,7 +4,7 @@ class ProductManegementsController < ApplicationController
   end
 
   def all 
-    @product = Product.all
+    @product = Product.all.page(params[:page]).per(5).order("created_at ASC")
   end
   
   def new
