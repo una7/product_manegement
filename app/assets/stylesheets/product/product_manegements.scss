@@ -11,6 +11,7 @@
 .product_name{
   height: 20px;
   width: 140px;
+  
 }
 .exhibition_price{
   height: 20px;
@@ -53,4 +54,10 @@ select{
   &:hover{
     background-color: orange;
   }
+}
+
+
+.successful_bidd_from{
+  height: 100%;
+  border: 1px solid black;
 }

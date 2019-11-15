@@ -1,10 +1,7 @@
 .use_icon{
-  margin: 30px 50px 0 50px;
-  display: inline-block;
+  margin: 30px 50px 30px 50px;
+  // display: inline-block;
   font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,7 +14,7 @@
 .result{
   // height: 100%;
   width: 400px;
-  margin: 20px 0 0 100px;
+  margin: 20px 0 0 30px;
   background-color:rgba(255,255,255,0.5); //rgba(赤,緑,青,透明度)
   &__search{
     color: black;
@@ -27,12 +24,22 @@
     
   }
 }
+.search_img{
+  // margin-bottom: 30px;
+  // padding-bottom: 30px;
+  text-align: center;
+}
+// .forest{
+//   margin: 0 auto;
+//   // text-align: center;
+  
+// }
 
 .yohji_link{
   
 }
 .yohji{
-  margin-left: 100px;
+  margin-left: 30px;
   text-decoration: none;
   color: white;
   &:hover{
