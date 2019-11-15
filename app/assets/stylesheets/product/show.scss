@@ -69,13 +69,19 @@
     background-color: orange;
   }
 }
-
 .comment{
+  margin: 0 auto;
+  text-align: center;
+}
+.comment_form{
   height: 300px;
   width: 500px;
-  background-color: white;
-  opacity: 0.5;
-  margin: 0 auto;
+  background-color:rgba(255,255,255,0.5); //rgba(赤,緑,青,透明度)
   margin-top: 30px;
+  padding: 20px;
   border-radius: 30px;
+}
+
+.memo{
+  text-decoration: none;
 }
