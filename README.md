@@ -19,6 +19,9 @@
 |shipping_fee|integer|null: false|
 |total_price|integer|null: true|
 
+### Association
+- belongs_to :sale, optional: true
+
 ## salesテーブル
 |column|type|options|
 |------|----|-------|
@@ -28,6 +31,9 @@
 |shipping_feed|integer|null: false|
 |profit|integer|null: false|
 |sold_period|date|null: false|
+
+### Association
+- has_one :product
 
 ## stocksテーブル
 |column|type|options|
