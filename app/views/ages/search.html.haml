@@ -1,10 +1,10 @@
 .wrapper
-  .background_image_2
+  .background_image_3
     .main_header
       = link_to "Product manegementS",root_path, class: 'top_page_link'
     = form_tag  ages_search_ages_path, method: :get, class:'use_icon'  do
       %input{:placeholder => " 検索する", :type => "search",name: "keyword"}
-      -# %button.use_icon{:type => "submit"}
+        -# %button{:type => "submit"}
     -# .search
     -#   検索結果
     .result
@@ -17,7 +17,7 @@
           -# =Rinku.auto_link(.result__search)
           -# = Rinku.auto_link(simple_format(age.url))
           -# = Rink.auto_link("#{=age.url}", :all, 'target="_blank"')
-
-
     .yohji_link
-    = link_to "ヨウジヤマモト","https://www.fashion-press.net/collections/brand/42", class:"yohji", target: "_blank"
+      = link_to "ヨウジヤマモト","https://www.fashion-press.net/collections/brand/42", class:"yohji", target: "_blank"
+    .search_img
+      = image_tag 'forest.jpg', class:"forest", size:'480x720'
