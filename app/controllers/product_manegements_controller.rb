@@ -5,6 +5,7 @@ class ProductManegementsController < ApplicationController
 
   def all 
     @product = Product.all.page(params[:page]).per(5).order("created_at ASC")
+    # @stock = Stock.find(params[:id])
   end
   
   def new
