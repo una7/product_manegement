@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resources :sales, only:[:index, :show, :destroy, :edit, :update] do
     collection do
       scope '/sales' do
+        get '/:id/cancel', to: 'sales#cancel', as: 'cancel'
+      end
+      scope '/sales' do
         get '/:id/new', to: 'sales#new', as: 'new'
       end
       scope '/sales' do
