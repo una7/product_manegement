@@ -57,6 +57,6 @@
           
         .cancel
           %button.cancel_btn 
-            = link_to "キャンセル",root_path(@product.id), class:"btn"
+            = link_to "キャンセル",cancel_sales_path(@product.id), class:"btn"
       .comment
         =text_area "#", class: "comment",placeholder: "メモ", style: "border: none"

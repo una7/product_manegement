@@ -1,5 +1,5 @@
 class SalesController < ApplicationController
-  before_action :set_sales, only: [:new, :create, :edit, :update]
+  before_action :set_sales, only: [:new, :create, :edit, :update, :cancel]
   def index 
     @product =Product.all.where(status: :sold) 
     @sale = Sale.all
@@ -30,6 +30,10 @@ class SalesController < ApplicationController
       redirect_to root_path(@product.id)
     end
   end
+  
+  def cancel
+    @products.update(status: :exhibit)
+  end
     
   private
   def sale_params
@@ -45,3 +49,6 @@ class SalesController < ApplicationController
   end
 
 end
+
+
+# .merge(status: :exhibit)キャンセル押されたらstatusをexhibitにする
