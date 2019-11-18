@@ -8,8 +8,11 @@ Rails.application.routes.draw do
       get 'all'
       scope "/product_manegements" do
         get '/:id/sold', to: "product_manegements#sold", as: "sold"
+      scope "/product_manegements" do
+        patch '/:id/memo', to: "product_manegements#memo", as: "memo"
       end
     end
+  end 
   end
   
   resources :sales, only:[:index, :show, :destroy, :edit, :update] do

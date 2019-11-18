@@ -1,5 +1,5 @@
 class ProductManegementsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :sold]
+  before_action :set_product, only: [:show, :edit, :update, :sold, :memo]
   def index 
   end
 
@@ -28,6 +28,11 @@ class ProductManegementsController < ApplicationController
   end
   
   def show
+  end
+  
+  def memo
+    @product.update(memo_params)
+    redirect_to product_manegement_path
   end
 
   def edit
@@ -66,6 +71,11 @@ class ProductManegementsController < ApplicationController
   def update_params
     params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price)
   end
+
+  def memo_params
+    params.require(:product).permit(:text)
+  end
+  
   def set_product
     @product = Product.find(params[:id])
   end
