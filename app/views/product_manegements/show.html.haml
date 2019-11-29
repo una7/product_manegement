@@ -45,8 +45,8 @@
         .delete
           %button.delete_btn 
             = link_to "削除",product_manegement_path(@product.id), method: :delete, class:"btn"
-      .comment
-        -# = form_with model: @comment do |f|
-        = form_for @product, url: memo_product_manegements_path(@product.id), method: :patch do |f|
-          = f.text_area :text, class: "comment_form",placeholder: "メモ...", style: "border: none"
-          = f.submit "メモする", class: "memo"
+      -# .comment
+      -#   -# = form_with model: @comment do |f|
+      -#   = form_for @product, url: memo_product_manegements_path(@product.id), method: :patch do |f|
+      -#     = f.text_area :text, class: "comment_form",placeholder: "メモ...", style: "border: none"
+      -#     = f.submit "メモする", class: "memo"
