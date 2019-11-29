@@ -73,7 +73,7 @@ class ProductManegementsController < ApplicationController
   end
 
   def memo_params
-    params.require(:product).permit(:text)
+    params.require(:product).permit(:comment)
   end
   
   def set_product
