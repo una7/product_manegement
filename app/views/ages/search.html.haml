@@ -10,14 +10,14 @@
     .result
       - @ages.each do |age|
         .result__search
-          = age.age+ ":"     #検索したアルファベットの表示
-          = age.season+ " :"
-          = age.url
-          %a{href: "#{age.url}"} ヨウジオム
-          -# =Rinku.auto_link(.result__search)
-          -# = Rinku.auto_link(simple_format(age.url))
-          -# = Rink.auto_link("#{=age.url}", :all, 'target="_blank"')
+          = age.age + ":"     #検索したアルファベットの表示
+          = age.season + " :"
+          -# = age.url
+          -# = raw Rinku.auto_link(h(age.url))
+          = raw Rinku.auto_link((h(age.url)), mode=:all, link_attr='target="_blank"', skip_tags=nil)
+
+
     .yohji_link
-      = link_to "ヨウジヤマモト","https://www.fashion-press.net/collections/brand/42", class:"yohji", target: "_blank"
+      = link_to "ヨウジヤマモト FASHON PRESS","https://www.fashion-press.net/collections/brand/42", class:"yohji", target: "_blank"
     .search_img
       = image_tag 'misyakeike.jpg', class:"forest", size:'720x480'
