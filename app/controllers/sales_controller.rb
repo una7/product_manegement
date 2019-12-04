@@ -3,6 +3,8 @@ class SalesController < ApplicationController
   def index 
     @product =Product.all.where(status: :sold) 
     @sale = Sale.all
+    marketp = "select place from markets join sales on markets.id = sales.market"
+    @marketp = Market.find_by_sql(marketp)
   end
   
   def new
@@ -20,6 +22,7 @@ class SalesController < ApplicationController
 
   def edit
     @sale = Sale.find(params[:id])
+    @market = Market.find(params[:id])
   end
 
   def update
@@ -49,6 +52,4 @@ class SalesController < ApplicationController
   end
 
 end
-
-
 # .merge(status: :exhibit)キャンセル押されたらstatusをexhibitにする

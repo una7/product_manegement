@@ -14,7 +14,7 @@
           %th 仕入れ価格
           %th 利益
           %th 売れるまでの日数
-        - @product.zip(@sale).each do |product,sale|
+        - @product.zip(@sale,@marketp).each do |product,sale,marketp|
           %tr
             %td
               = sale.sold_day
@@ -23,11 +23,10 @@
             %td
               =link_to product.product_name + "[#{product.id.to_s}]", edit_sale_path(product.id)
             %td
-              = sale.market
-              -# =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
+              -# = sale.market
+              = marketp.place      #売れた場所を表示する
             %td
               = sale.proceeds
-              -# =f.text_field :proceeds, class: "proceeds_from",placeholder: "",maxlength: "8", size:"18", style: "border: none"
             %td 
               = sale.shipping_feed
             %td 
