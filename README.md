@@ -93,17 +93,15 @@ http://18.177.66.43/
 ## プレビュー
 ### 非同期自動計算  
 #### 仕入れ金額自動計算
-  ![20be7af400415064726f4a08f8733a44](https://user-images.githubusercontent.com/55130952/70041405-79f2fc80-1600-11ea-9c27-3cd0a3c0a468.gif)  
-
-  →出品価格、落札価格、負担した送料を入力すると合計仕入れ金額が非同期で自動反映されます。 
+  ![2fbd6bbdcc859bfa013641c77b1ba302](https://user-images.githubusercontent.com/55130952/70225361-3b8d4700-1792-11ea-8204-f61935650455.gif)  
+  →出品価格、落札価格、負担した送料を入力すると合計仕入れ金額が非同期で自動反映されます。  
 
 #### 利益自動計算
-  ![353a0638a2c6a0db2c4219685dbd6868](https://user-images.githubusercontent.com/55130952/70042101-a9563900-1601-11ea-9bc3-6fcd0b332b39.gif)  
-
+  ![a15848c5c172b497a2d56a52d96e43a7](https://user-images.githubusercontent.com/55130952/70225726-eaca1e00-1792-11ea-866b-1f65b10b9b3e.gif)  
   →売り上げ金額、負担する送料を入力すると利益が非同期で自動反映されます。(仕入れ価格は商品登録の際に入れた情報を反映させている)
 
 ### 年代検索機能  
-  ![2381a2083bb1ccfc9c5c34649d4d7526](https://user-images.githubusercontent.com/55130952/70116794-1243bc80-16a7-11ea-9db5-ef0676ac1798.gif)  
+  ![ebd5e6a1b015abec7b7f8cc966460515](https://user-images.githubusercontent.com/55130952/70225852-2d8bf600-1793-11ea-9407-f96226953205.gif)  
     →A~Z(小文字も可)のアルファベットを入れるとヨウジヤマモトの年代検索ができます。
 
 ## 使用技術
