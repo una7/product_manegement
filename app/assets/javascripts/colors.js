@@ -3,6 +3,3 @@
 //   $(this).css( "background-color", "blue")
 //   });
 //   });
-$(document).on("turbolinks:load", function(){
-  $('.link').text("ヨウジ");
-})
