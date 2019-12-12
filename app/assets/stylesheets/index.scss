@@ -20,8 +20,10 @@
   background-color: black;
 }
 
-.login_user{
 
+.not_login_box,
+.sign_up_box{
+  margin: 0 0 10px 30px;
 }
 
 .login.box{
@@ -30,7 +32,8 @@
   // background-color: rgba(0,0,0,0.15);
 }
 .login,
-.logout{ 
+.logout,
+.sign_up{ 
   text-decoration: none;
 }
 
@@ -82,7 +85,9 @@
     visibility: hidden;
   }
 }
-
+// .main_contents{
+//   margin-top: -50px;
+// }
 .product_manegement_regi,
 .product_manegement_list,
 .product_manegement_list__all,

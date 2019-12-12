@@ -9,8 +9,10 @@
       ="#{current_user.name}さん"
     .login
       - unless user_signed_in?
-        .not_login 
-          = link_to "ログインしてください", new_user_session_path, class:"login"
+        .not_login_box 
+          = link_to "ログイン", new_user_session_path, class:"login"
+        .sign_up_box  
+          = link_to "新規登録", new_user_registration_path, class:"sign_up"
       - else
         .log_in 
           = link_to"ログアウト", destroy_user_session_path, method: :delete, class:"logout"
