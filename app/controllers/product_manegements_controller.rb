@@ -66,7 +66,7 @@ class ProductManegementsController < ApplicationController
   
   private
   def product_params
-    params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price).merge(status: :exhibit)
+    params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price).merge(status: :exhibit, user_id: current_user.id)
   end
   def update_params
     params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price)
