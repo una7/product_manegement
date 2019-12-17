@@ -4,7 +4,7 @@ class ProductManegementsController < ApplicationController
   end
 
   def all 
-    @product = Product.all.page(params[:page]).per(5).order("created_at ASC")
+    @product = Product.includes(:user).all.page(params[:page]).per(7).order("created_at ASC")
     # @stock = Stock.find(params[:id])
   end
   
@@ -23,7 +23,7 @@ class ProductManegementsController < ApplicationController
   end
   
   def registration
-    @product = Product.all.where(status: :exhibit)
+    @product = Product.includes(:user).all.where(status: :exhibit).page(params[:page]).per(7).order("created_at ASC")
     # @product = Product.all.where(status: :sold) 売れたもののみ表示するとき
   end
   

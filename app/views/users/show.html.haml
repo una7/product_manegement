@@ -2,6 +2,8 @@
   .background_image
     .main_header
       = link_to "Product managementS",root_path, class: 'top_page_link'
+    .user_name
+      ="#{current_user.name} さんの商品一覧"
     .main_content 
       %table
         %tr
@@ -13,8 +15,9 @@
           %th 仕入れ価格
           %th 負担した送料
           %th 合計仕入れ金額
-        - @product.each do |product|
+        - @products.each do |product|
           %tr
+            -# =link_to product_manegement_path(product.id), class:"link"
             %td
               = product.arrival
             %td 
@@ -33,4 +36,4 @@
               = product.total_price
 
     .page
-      = paginate @product
+      = paginate @products

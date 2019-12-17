@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'users/:user_id'      => 'users#show'     #Mypageへのルーティング
   root 'product_manegements#index'
   
   resources :product_manegements, only:[:show, :new, :create, :destroy, :edit, :update] do

@@ -6,7 +6,7 @@
 
     .login_user
     - if user_signed_in?
-      ="#{current_user.name}さん"
+      =link_to"#{current_user.name}さん","/users/#{current_user.id}",class:"login_name"
     .login
       - unless user_signed_in?
         .not_login_box 
