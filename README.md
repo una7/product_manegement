@@ -54,7 +54,7 @@
 
 
 
-# 商品管理アプリ product_manegement
+# 商品管理アプリ product_managements
 
 ## URL
 
