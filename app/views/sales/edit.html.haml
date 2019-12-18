@@ -21,7 +21,7 @@
               %td 
                 = @product.id
               %td
-                =link_to @product.product_name + "[#{@product.id.to_s}]", edit_sale_path(@product.id)
+                =link_to @product.product_name + "[#{@product.number}]", edit_sale_path(@product.id)
               %td
                 =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
               %td

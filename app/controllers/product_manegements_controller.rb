@@ -13,8 +13,11 @@ class ProductManegementsController < ApplicationController
   end
   
   def create
+    count = current_user.count + 1
     @product = Product.new(product_params)
+    @product.number = count
     if @product.save
+      current_user.update(count: count)
       redirect_to registration_product_manegements_path
     else
       render :new
@@ -66,6 +69,8 @@ class ProductManegementsController < ApplicationController
   
   private
   def product_params
+    # count = User.where(user_id: current_user.id).count + 1
+    # number = Product.where(user_id: current_user.id).count + 1
     params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price).merge(status: :exhibit, user_id: current_user.id)
   end
   def update_params
