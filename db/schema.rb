@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_083938) do
     t.string "status"
     t.text "comment"
     t.integer "user_id"
+    t.integer "number"
   end
 
   create_table "sales", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
