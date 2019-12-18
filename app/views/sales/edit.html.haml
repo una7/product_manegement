@@ -18,43 +18,30 @@
             %tr
               %td
                 =f.date_field :sold_day, class: "sold_day_from",placeholder: "", style: "border: none"
-                -# = @sale.sold_day
               %td 
                 = @product.id
               %td
                 =link_to @product.product_name + "[#{@product.id.to_s}]", edit_sale_path(@product.id)
               %td
-                -# = @sale.market
                 =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
-                -# =f.select :market,Market.all.collect { |p| [ p.place, p.id ] }, prompt: "---", style: "border: none"
               %td
                 =f.text_field :proceeds, class: "proceeds_from",placeholder: "",maxlength: "8", size:"18", style: "border: none"
-                -# = @sale.proceeds
               %td
                 =f.text_field :shipping_feed, class: "sales_place_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
-                -# = @sale.shipping_feed
               %td 
                 = @product.total_price
               %td
                 =f.text_field :profit, class: "total_profit_from",placeholder: "",maxlength: "", size:"18", style: "border: none"
-                -# = @sale.profit
               %td 
                 =f.text_field :sold_period, class: "total_period_from",placeholder: "",maxlength: "", size:"15", style: "border: none"
-                -# = @sale.sold_period
 
       .all_btn
         .sold
           %button.return_btn 
             =link_to "戻る", sales_path, class:"btn"
-        -# .sold
-        -#   %button.sold_btn
-        -#     =link_to "た", root_path, class:"btn"
-
         .edit
           %button.edit_btn 
-            -# = link_to "編集完了！", sale_path,method: :patch, class:"btn"
             = f.submit "編集完了！", class:"product_button"
-          
         .cancel
           %button.cancel_btn 
             = link_to "キャンセル",cancel_sales_path(@product.id), class:"btn"
