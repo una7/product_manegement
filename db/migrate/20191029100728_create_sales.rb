@@ -6,7 +6,7 @@ class CreateSales < ActiveRecord::Migration[5.2]
       t.string   :proceeds,       null: false     #売上金額
       t.integer  :shipping_feed,  null: false     #負担する送料
       t.integer  :profit,         null: false     #利益
-      t.integer     :sold_period,    null: false     #売れるまでの日数 =入荷日 - 売れた日
+      t.integer     :sold_period,    null: true     #売れるまでの日数 =入荷日 - 売れた日
       t.timestamps
     end
   end
