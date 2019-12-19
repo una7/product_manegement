@@ -1,0 +1,50 @@
+// .field{
+//   height: 100px;
+//   width: 200px;
+//   color: white;
+// }
+
+
+.sign_up,
+.field{
+  // text-align: center;
+  &__upper{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 30px;
+    padding: 10px;
+    border-bottom: medium solid #444444;
+  }
+}
+
+.email,
+.password,
+.name{
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  }
+
+.email_form,
+.new-password_form,
+.name_form{
+  margin: 10px 30px 30px 30px;
+  padding: 10px;
+  // width: 500px;
+}
+
+.submit{
+  margin: 10px 30px 30px 30px;
+  padding: 10px;
+  height: 50px;
+  width: 120px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  background-color: #49722C;
+  // &:hover{
+  // }
+}

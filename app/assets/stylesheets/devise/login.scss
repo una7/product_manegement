@@ -1,0 +1,12 @@
+.login_view,
+.field{
+  // text-align: center;
+  &__upper{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 30px;
+    padding: 10px;
+    border-bottom: medium solid #444444;
+  }
+}
