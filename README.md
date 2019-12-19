@@ -97,11 +97,13 @@ http://18.177.66.43/
 ## プレビュー
 ### 非同期自動計算  
 #### 仕入れ金額自動計算
-  ![2fbd6bbdcc859bfa013641c77b1ba302](https://user-images.githubusercontent.com/55130952/70225361-3b8d4700-1792-11ea-8204-f61935650455.gif)  
+  ![ef80a230a7653aff6504e4b16fede7b0](https://user-images.githubusercontent.com/55130952/71146205-a39a5d80-2267-11ea-8c27-8ce5b87988d0.gif)
+  
   →出品価格、仕入れ価格、負担した送料を入力すると合計仕入れ金額が非同期で自動反映されます。  
 
 #### 利益自動計算
-  ![a15848c5c172b497a2d56a52d96e43a7](https://user-images.githubusercontent.com/55130952/70225726-eaca1e00-1792-11ea-866b-1f65b10b9b3e.gif)  
+  ![f81f0df029842b08a89864919324965d](https://user-images.githubusercontent.com/55130952/71146283-fd028c80-2267-11ea-9325-867492030c53.gif)
+  
   →売り上げ金額、負担する送料を入力すると利益が非同期で自動反映されます。(仕入れ価格は商品登録の際に入れた情報を反映させている)
 
 ### 年代検索機能  
