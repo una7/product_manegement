@@ -34,8 +34,7 @@
 |proceeds|string|null: false|
 |shipping_feed|integer|null: false|
 |profit|integer|null: false|
-|sold_period|date|null: false|
-
+|sold_period|date|null: true|
 ### Association
 - has_one :product
 
