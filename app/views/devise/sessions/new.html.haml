@@ -5,6 +5,7 @@
 
     .login_view
     .login_view__upper
+      ログイン
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field
         = f.label :Eメールアドレス, class:"email"
