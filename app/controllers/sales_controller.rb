@@ -21,12 +21,13 @@ class SalesController < ApplicationController
   end
 
   def edit
-    @sale = Sale.find(params[:id])
+    @sale = Sale.find_by(product_id: @product.id)
     @market = Market.find(params[:id])
+  
   end
 
   def update
-    @sale = Sale.find(params[:id])
+    @sale = Sale.find_by(product_id: @product.id)
     if @sale.update(update_params)
       redirect_to sales_path notice: '情報を編集しました'
     else
