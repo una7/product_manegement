@@ -13,7 +13,7 @@
           %th 負担する送料
           %th 仕入れ価格
           %th 利益
-          %th 売れるまでの日数
+          -# %th 売れるまでの日数
         - @product.zip(@sale,@marketp).each do |product,sale,marketp|
           %tr
             %td
@@ -33,5 +33,5 @@
               = product.total_price
             %td 
               = sale.profit
-            %td 
-              = sale.sold_period
+            -# %td 
+            -#   = sale.sold_period

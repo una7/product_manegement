@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_083938) do
     t.string "proceeds", null: false
     t.integer "shipping_feed", null: false
     t.integer "profit", null: false
-    t.integer "sold_period", null: false
+    t.integer "sold_period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "product_id"
