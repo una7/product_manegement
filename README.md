@@ -7,6 +7,9 @@
 |name|string|null: false|
 |email|string|null: false|
 
+### Association
+- has_many :products
+
 ## productsテーブル
 |column|type|options|
 |------|----|-------|
@@ -20,6 +23,7 @@
 |total_price|integer|null: true|
 
 ### Association
+- belongs_to :user
 - belongs_to :sale, optional: true
 
 ## salesテーブル
