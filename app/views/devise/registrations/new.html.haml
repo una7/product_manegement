@@ -11,21 +11,25 @@
       .field
         -# %i.fas.fa-exclamation-triangle
         = f.label :Eメールアドレス, class:"email"
+        %em 必須
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Eメールアドレスを入力してください", class:"email_form"
       .field
         = f.label :パスワード, class:"password"
-        - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} 文字以上)
+        %em 必須
+        -# - if @minimum_password_length
+        -#   %em
+        -#     (#{@minimum_password_length} 文字以上)
         %br/
         = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上で入力してください", class:"new-password_form"
       .field
         = f.label :パスワード再入力, class:"password"
+        %em 必須
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "6文字以上で入力してください", class:"new-password_form"
       .field
         = f.label :名前, class:"name"
+        %em 必須
         %br/
         = f.text_field :name, placeholder: "ニックネームを入力してください", class:"name_form"
       .actions

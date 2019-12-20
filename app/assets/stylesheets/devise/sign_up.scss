@@ -10,7 +10,11 @@
     border-bottom: medium solid #444444;
   }
 }
-
+em{
+  color: white;
+  margin-left: 10px;
+  background-color: #23977F;
+}
 .email,
 .password,
 .name{
@@ -27,6 +31,8 @@
   width: 500px;
   &:hover{
     cursor: pointer;
+    border: 2px solid #e88500;
+    background-color: #d4b78e;
   }
 }
 
