@@ -10,11 +10,11 @@
       .field
         = f.label :Eメールアドレス, class:"email"
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email", class:"email_form"
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Eメールアドレスを入力してください", class:"email_form"
       .field
         = f.label :パスワード, class:"password"
         %br/
-        = f.password_field :password, autocomplete: "current-password", class:"new-password_form"
+        = f.password_field :password, autocomplete: "current-password", placeholder: "6文字以上で入力してください", class:"new-password_form"
       - if devise_mapping.rememberable?
         .field
           = f.check_box :remember_me
