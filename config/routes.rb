@@ -13,13 +13,7 @@ Rails.application.routes.draw do
       patch 'memo'
     end
   end
-      # scope "/product_manegements" do
-      #   get '/:id/sold', to: "product_manegements#sold", as: "sold"
-      # end
-      # scope "/product_manegements" do
-      # patch '/:id/memo', to: "product_manegements#memo", as: "memo"
-      # end
-  
+    
   resources :sales, only:[:index, :show, :destroy, :edit, :update] do
     collection do
       scope '/sales' do
