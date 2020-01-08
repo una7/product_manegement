@@ -36,17 +36,16 @@
             =link_to "戻る", registration_product_manegements_path, class:"btn"
         .sold
           %button.sold_btn
-            =link_to "売れた", sold_product_manegements_path(@product.id), class:"btn"
+            =link_to "売れた", sold_product_manegement_path(@product.id), class:"btn"
 
         .edit
           %button.edit_btn 
             =link_to "編集", edit_product_manegement_path, class:"btn"
-          
         .delete
           %button.delete_btn 
             = link_to "削除",product_manegement_path(@product.id), method: :delete, class:"btn"
       .comment
         -# = form_with model: @comment do |f|
-        = form_for @product, url: memo_product_manegements_path(@product.id), method: :patch do |f|
+        = form_for @product, url: memo_product_manegement_path(@product.id), method: :patch do |f|
           = f.text_area :comment, class: "comment_form",placeholder: "メモ...", style: "border: none"
           = f.submit "メモする", class: "memo"

@@ -51,11 +51,17 @@ class ProductManegementsController < ApplicationController
   
   def destroy
     @product = Product.find(params[:id])
-    if @product.destroy
-      redirect_to registration_product_manegements_path
-    else
-      redirect_to :show
+    if @product.user_id == current_user.id #出品したユーザーしか消せない
+      @product.destroy
+    else 
+      redirect_to root_path
     end
+
+    # if @product.destroy
+    #   redirect_to registration_product_manegements_path
+    # else
+    #   redirect_to :show
+    # end
   end
   
   def sold
