@@ -5,7 +5,6 @@ class ProductManegementsController < ApplicationController
 
   def all 
     @product = Product.includes(:user).all.page(params[:page]).per(7).order("created_at ASC")
-    # @stock = Stock.find(params[:id])
   end
   
   def new
@@ -56,12 +55,6 @@ class ProductManegementsController < ApplicationController
     else 
       redirect_to root_path
     end
-
-    # if @product.destroy
-    #   redirect_to registration_product_manegements_path
-    # else
-    #   redirect_to :show
-    # end
   end
   
   def sold
@@ -75,8 +68,6 @@ class ProductManegementsController < ApplicationController
   
   private
   def product_params
-    # count = User.where(user_id: current_user.id).count + 1
-    # number = Product.where(user_id: current_user.id).count + 1
     params.require(:product).permit(:arrival, :successful_bid, :product_name, :product_price, :stock, :unit_price, :shipping_fee, :total_price).merge(status: :exhibit, user_id: current_user.id)
   end
   def update_params
