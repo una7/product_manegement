@@ -7,14 +7,18 @@ Rails.application.routes.draw do
     collection do
       get 'registration'
       get 'all'
-      scope "/product_manegements" do
-        get '/:id/sold', to: "product_manegements#sold", as: "sold"
-      scope "/product_manegements" do
-        patch '/:id/memo', to: "product_manegements#memo", as: "memo"
-      end
+    end 
+    member do
+      get 'sold'
+      patch 'memo'
     end
-  end 
   end
+      # scope "/product_manegements" do
+      #   get '/:id/sold', to: "product_manegements#sold", as: "sold"
+      # end
+      # scope "/product_manegements" do
+      # patch '/:id/memo', to: "product_manegements#memo", as: "memo"
+      # end
   
   resources :sales, only:[:index, :show, :destroy, :edit, :update] do
     collection do
